@@ -4,7 +4,7 @@ import calendar from './calendar'
 const ics = require('ics')
 
 const app = express()
-app.get('/', async (req, res) => {
+app.get('/ical', async (req, res) => {
   const ical = await calendar()
   res.send(ical)
 })
